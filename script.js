@@ -1,3 +1,5 @@
+
+
 function getComputerChoice() {
     let computerChoices = ["rock", "paper", "scissors"];
    let random = Math.floor(Math.random() * computerChoices.length);
@@ -8,6 +10,8 @@ function getComputerChoice() {
 
 }
 
-
+let playerChoice = prompt("Enter Rock, Paper, or Scissors");
+playerChoice = playerChoice.toLocaleLowerCase();
+console.log("Player picked: " + playerChoice);
 
 getComputerChoice();
