@@ -1,4 +1,5 @@
-
+let wins = 0;
+let loss = 0;
 
 function getComputerChoice() {
     let computerChoices = ["rock", "paper", "scissors"];
