@@ -19,9 +19,10 @@ function playRound(playerChoice, computerChoice) {
               (playerChoice == "paper" && computerChoice == "rock") ||
               (playerChoice == "scissors" && computerChoice == "paper") ) 
               {
-
+                wins++
                 return "YOU WIN";
               }  else {
+                loss++
                 return "YOU LOSE";
               }
 }
