@@ -10,8 +10,27 @@ function getComputerChoice() {
 
 }
 
+
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice == computerChoice) {
+        return "IT'S A TIE";
+    } else if ( (playerChoice == "rock" && computerChoice == "scissors") ||
+              (playerChoice == "paper" && computerChoice == "rock") ||
+              (playerChoice == "scissors" && computerChoice == "paper") ) 
+              {
+
+                return "YOU WIN";
+              }  else {
+                return "YOU LOSE";
+              }
+}
+
+let computerChoice = getComputerChoice();
+
 let playerChoice = prompt("Enter Rock, Paper, or Scissors");
 playerChoice = playerChoice.toLocaleLowerCase();
 console.log("Player picked: " + playerChoice);
 
-getComputerChoice();
+
+console.log(playRound(playerChoice, computerChoice));
+
