@@ -20,19 +20,30 @@ function playRound(playerChoice, computerChoice) {
               (playerChoice == "scissors" && computerChoice == "paper") ) 
               {
                 wins++
-                return "YOU WIN";
+                return "You won the round";
               }  else {
                 loss++
-                return "YOU LOSE";
+                return "You lost the round";
               }
 }
 
-let computerChoice = getComputerChoice();
 
-let playerChoice = prompt("Enter Rock, Paper, or Scissors");
+while (wins < 3 && loss < 3) {
+    let playerChoice = prompt("Enter Rock, Paper, or Scissors");
 playerChoice = playerChoice.toLocaleLowerCase();
 console.log("Player picked: " + playerChoice);
+let computerChoice = getComputerChoice();
 
 
 console.log(playRound(playerChoice, computerChoice));
+console.log("Player Score: " + wins);
+console.log("Computer Score: " + loss);
 
+
+}
+
+if (wins == 3) {
+    console.log("You Won The Game");
+} else if (loss == 3) {
+    console.log("You Lost The Game");
+}
