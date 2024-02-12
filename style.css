@@ -1,0 +1,30 @@
+body {
+    background-color: antiquewhite;
+}
+
+#container {
+display: flex;
+justify-content: center;
+text-align: center;
+gap: 25px;
+padding-top: 100px;
+padding-bottom: 15px;
+
+}
+
+
+
+#results {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    text-align: center;
+}
+
+#winner {
+    text-align: center;
+}
+
+#tie {
+    text-align: center;
+}

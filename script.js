@@ -5,28 +5,25 @@ const btns = document.querySelectorAll("button");
 const winText = document.querySelector("#wins");
 const lossText = document.querySelector("#losses");
 const winner = document.querySelector("#winner")
-const tie = document.createElement("h2");
+const tie = document.querySelector("#tie")
+const tieText = document.createElement("p");
 btns.forEach((btns) => {
     btns.addEventListener("click", () => {
-        tie.remove();
+        tieText.remove();
         let computerChoice = getComputerChoice();                                                 
         let playerChoice = btns.value;
-        console.log("player picked: " +playerChoice);
 
 playRound(playerChoice, computerChoice);    
 winText.textContent = `Player's Wins: ${wins}`; 
 lossText.textContent = `Computer's Wins: ${loss}`;                       
-console.log("Player Score: " + wins);                                                       
-console.log("Computer Score: " + loss);
+
     
     
 if (wins == 3) {     
     winner.textContent = "PLAYER WINS";                                                       
-    console.log("You Won The Game");
     div.remove();
 } else if (loss == 3) {
     winner.textContent = "COMPUTER WINS";
-    console.log("You Lost The Game");
                                 
 };
 
@@ -35,7 +32,6 @@ if (wins == 3) {
         let computerChoices = ["rock", "paper", "scissors"];                           // creates array
        let random = Math.floor(Math.random() * computerChoices.length);                // randomly assigns random to a number between 1-3
        let computerChoice = computerChoices[random];                                   // assigns computerChoice to one of the arrays items depending on the value of the variable above
-       console.log("Computer picked: " + computerChoice);                              // logs it 
        return computerChoice;                                                          // returns the value 
     
     
@@ -44,8 +40,8 @@ if (wins == 3) {
     
     function playRound(playerChoice, computerChoice) {                                // function to play a single round with the game rule set built in and also keeps counts of wins and losses
         if (playerChoice == computerChoice) {
-            tie.textContent = "IT'S A TIE!";
-            results.appendChild(tie);
+            tieText.textContent = "IT'S A TIE!";
+            tie.appendChild(tieText);
             return "IT'S A TIE";
         } else if ( (playerChoice == "rock" && computerChoice == "scissors") ||
                   (playerChoice == "paper" && computerChoice == "rock") ||
