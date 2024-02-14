@@ -24,7 +24,7 @@ if (wins == 3) {
     div.remove();
 } else if (loss == 3) {
     winner.textContent = "COMPUTER WINS";
-                                
+    div.remove();                          
 };
 
 
