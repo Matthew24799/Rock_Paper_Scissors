@@ -19,10 +19,10 @@ lossText.textContent = `Computer's Wins: ${loss}`;
 
     
     
-if (wins == 3) {     
+if (wins === 3) {     
     winner.textContent = "PLAYER WINS";                                                       
     div.remove();
-} else if (loss == 3) {
+} else if (loss === 3) {
     winner.textContent = "COMPUTER WINS";
     div.remove();                          
 };
